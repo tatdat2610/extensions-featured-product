@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="custom_extensions_config"  translate="label" sortOrder="0">
+            <label>Extensions</label>
+        </tab>
+        <section id="featured_product" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Featured Product</label>
+            <tab>custom_extensions_config</tab>
+            <resource>Extensions_FeaturedProduct::config</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>General</label>
+                <field id="enable" showInDefault="1" showInWebsite="1" sortOrder="10"
+                       translate="label" type="select">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="limit_number_of_product" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20"
+                       translate="label" type="text">
+                    <label>Limit number of product in featured product block</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

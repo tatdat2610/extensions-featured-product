@@ -1,0 +1,19 @@
+<div >
+    <ul data-bind="scope: 'featured-products'" id="featured-product">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </ul>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#featured-product": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "featured-products": {
+                        "component": "Extensions_FeaturedProduct/js/view/featured_products",
+                        "template" : "Extensions_FeaturedProduct/featured_products"
+                    }
+                }
+            }
+        }
+    }
+</script>

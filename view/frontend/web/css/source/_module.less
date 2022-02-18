@@ -1,0 +1,50 @@
+& when (@media-common = true) {
+    .featured-product-items {
+        width: 100%;
+        float: left;
+        margin: 10px 0;
+    }
+    .item-photo {
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        float: left;
+
+        img {
+            width: 100%;
+        }
+    }
+    .item-details {
+        width: 66%;
+        float: left;
+        padding: 10px;
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+& when (@media-target = 'mobile'), (@media-target = 'all') {
+    @media only screen and (max-width: 375px) {
+        .item-photo {
+            width: 100%;
+        }
+        .item-details {
+            width: 100%;
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+        .item-photo {
+            width: 100%;
+        }
+        .item-details {
+            width: 100%;
+        }
+    }
+}

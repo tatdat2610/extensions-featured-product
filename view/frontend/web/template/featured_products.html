@@ -1,0 +1,25 @@
+<div class="featured-products" data-bind="visible:visible()">
+    <ol class="products list items">
+        <!-- ko foreach: featuredProducts() -->
+        <div class="item product featured-product-items" data-bind="attr:{'data-sku':$data.sku}">
+            <div class="item-photo">
+                <img data-bind="attr:{src:$data.thumbnai_image_url}"/>
+            </div>
+            <div class="details item-details">
+                <div>
+                    <strong class="product name item-name">
+                        <span data-bind="attr:{href:$data.product_url},text:$data.name"></span>
+                    </strong>
+                    <div>
+                        <span data-bind="text:$data.original_price"></span>
+                    </div>
+                </div>
+                <div data-bind="html:$data.short_description" class="item-detail"></div>
+                <div class="item-action">
+                    <a class="product-item-link"  data-bind="attr:{href:$data.product_url},i18n:'View Product'"></a>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </ol>
+</div>
